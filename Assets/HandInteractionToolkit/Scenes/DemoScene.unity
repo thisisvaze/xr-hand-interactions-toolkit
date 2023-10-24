@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -330,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678045294}
-  - component: {fileID: 1678045293}
+  - component: {fileID: 1678045295}
   m_Layer: 0
   m_Name: HandInterationsSetup
   m_TagString: Untagged
@@ -338,33 +338,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1678045293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678045292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 343775aec39f64d2799179a94280c9f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _whenHandsJoint:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1875778405}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1678045294
 Transform:
   m_ObjectHideFlags: 0
@@ -380,6 +353,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678045295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678045292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44612bd51bb9a4042aa07ce306c9172f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviorDescription: I want the cube to move as I move my right hand only when
+    the hand  is facing down. It should translate based on the hand's position and
+    1m in front of the hand in z-axis
+  actionGameObject: {fileID: 1875778405}
+  _whenCustomHandPoseActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenCustomHandPoseDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1875778405
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +474,7 @@ Transform:
   m_GameObject: {fileID: 1875778405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06387998, y: 0.9654429, z: 0.6052716}
+  m_LocalPosition: {x: 0.06387998, y: 1.67, z: 0.6052716}
   m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
   m_ConstrainProportionsScale: 1
   m_Children: []
